@@ -20,10 +20,10 @@ class TuggingGame(gamelib.SimpleGame):
         pass
 
     def on_key_up(self, key):
-        if key == K_d:
+        if key == K_LEFT:
             self.leftplayer.move_left()
             self.rightplayer.move_left()
-        elif key == K_l:
+        elif key == K_RIGHT:
             self.leftplayer.move_right()
             self.rightplayer.move_right()
 
