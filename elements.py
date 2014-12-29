@@ -14,9 +14,9 @@ class LeftPlayer(object):
         self.height = height
         self.image = pygame.transform.scale(leftPlayer, (int(self.height), int(self.width)))
 
-    def can_hit(self, ball):
-        return self.pos-self.width/2.0 < ball.y < self.pos+self.width/2.0 \
-            and ball.x-ball.radius < self.THICKNESS
+    def lose(self):
+        #if self.pos[0] >= 680 :
+        pass
 
     def move_left(self):
         self.pos = (self.pos[0]-moveDistance, self.pos[1])
@@ -41,7 +41,7 @@ class RightPlayer(object):
         self.height = height
         self.image = pygame.transform.scale(rightPlayer, (int(self.height), int(self.width)))
 
-    def can_hit(self, ball):
+    def lose(self, ball):
         return self.pos-self.width/2.0 < ball.y < self.pos+self.width/2.0 \
             and ball.x-ball.radius < self.THICKNESS
 
